@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-SemiBold.eot');
+    src: url('../fonts/Oswald-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Oswald-SemiBold.woff2') format('woff2'),
+        url('../fonts/Oswald-SemiBold.woff') format('woff'),
+        url('../fonts/Oswald-SemiBold.ttf') format('truetype'),
+        url('../fonts/Oswald-SemiBold.svg#Oswald-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-Regular.eot');
+    src: url('../fonts/Oswald-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Oswald-Regular.woff2') format('woff2'),
+        url('../fonts/Oswald-Regular.woff') format('woff'),
+        url('../fonts/Oswald-Regular.ttf') format('truetype'),
+        url('../fonts/Oswald-Regular.svg#Oswald-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-ExtraLight.eot');
+    src: url('../fonts/Oswald-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Oswald-ExtraLight.woff2') format('woff2'),
+        url('../fonts/Oswald-ExtraLight.woff') format('woff'),
+        url('../fonts/Oswald-ExtraLight.ttf') format('truetype'),
+        url('../fonts/Oswald-ExtraLight.svg#Oswald-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-Medium.eot');
+    src: url('../fonts/Oswald-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Oswald-Medium.woff2') format('woff2'),
+        url('../fonts/Oswald-Medium.woff') format('woff'),
+        url('../fonts/Oswald-Medium.ttf') format('truetype'),
+        url('../fonts/Oswald-Medium.svg#Oswald-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-Bold.eot');
+    src: url('../fonts/Oswald-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Oswald-Bold.woff2') format('woff2'),
+        url('../fonts/Oswald-Bold.woff') format('woff'),
+        url('../fonts/Oswald-Bold.ttf') format('truetype'),
+        url('../fonts/Oswald-Bold.svg#Oswald-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-Light.eot');
+    src: url('../fonts/Oswald-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Oswald-Light.woff2') format('woff2'),
+        url('../fonts/Oswald-Light.woff') format('woff'),
+        url('../fonts/Oswald-Light.ttf') format('truetype'),
+        url('../fonts/Oswald-Light.svg#Oswald-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../fonts/Gelasio-Bold.eot');
+    src: url('../fonts/Gelasio-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gelasio-Bold.woff2') format('woff2'),
+        url('../fonts/Gelasio-Bold.woff') format('woff'),
+        url('../fonts/Gelasio-Bold.ttf') format('truetype'),
+        url('../fonts/Gelasio-Bold.svg#Gelasio-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../fonts/Gelasio-SemiBoldItalic.eot');
+    src: url('../fonts/Gelasio-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gelasio-SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/Gelasio-SemiBoldItalic.woff') format('woff'),
+        url('../fonts/Gelasio-SemiBoldItalic.ttf') format('truetype'),
+        url('../fonts/Gelasio-SemiBoldItalic.svg#Gelasio-SemiBoldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../fonts/Gelasio-MediumItalic.eot');
+    src: url('../fonts/Gelasio-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gelasio-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Gelasio-MediumItalic.woff') format('woff'),
+        url('../fonts/Gelasio-MediumItalic.ttf') format('truetype'),
+        url('../fonts/Gelasio-MediumItalic.svg#Gelasio-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../fonts/Gelasio-BoldItalic.eot');
+    src: url('../fonts/Gelasio-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gelasio-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Gelasio-BoldItalic.woff') format('woff'),
+        url('../fonts/Gelasio-BoldItalic.ttf') format('truetype'),
+        url('../fonts/Gelasio-BoldItalic.svg#Gelasio-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../fonts/Gelasio-SemiBold.eot');
+    src: url('../fonts/Gelasio-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gelasio-SemiBold.woff2') format('woff2'),
+        url('../fonts/Gelasio-SemiBold.woff') format('woff'),
+        url('../fonts/Gelasio-SemiBold.ttf') format('truetype'),
+        url('../fonts/Gelasio-SemiBold.svg#Gelasio-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../fonts/Gelasio-Italic.eot');
+    src: url('../fonts/Gelasio-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gelasio-Italic.woff2') format('woff2'),
+        url('../fonts/Gelasio-Italic.woff') format('woff'),
+        url('../fonts/Gelasio-Italic.ttf') format('truetype'),
+        url('../fonts/Gelasio-Italic.svg#Gelasio-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../fonts/Gelasio-Medium.eot');
+    src: url('../fonts/Gelasio-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gelasio-Medium.woff2') format('woff2'),
+        url('../fonts/Gelasio-Medium.woff') format('woff'),
+        url('../fonts/Gelasio-Medium.ttf') format('truetype'),
+        url('../fonts/Gelasio-Medium.svg#Gelasio-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../fonts/Gelasio-Regular.eot');
+    src: url('../fonts/Gelasio-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gelasio-Regular.woff2') format('woff2'),
+        url('../fonts/Gelasio-Regular.woff') format('woff'),
+        url('../fonts/Gelasio-Regular.ttf') format('truetype'),
+        url('../fonts/Gelasio-Regular.svg#Gelasio-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
