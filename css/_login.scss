@@ -1,0 +1,420 @@
+.header-login{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 16px 0;
+	border-bottom: 1px solid #BDBDBD;
+	z-index: 99;
+	background: #fff;
+	text-align: center;
+	a{
+		display: table;
+		margin: auto;
+		svg{
+			display: block;
+		}
+	}
+}
+
+.content-login{
+	padding: 60px 0;
+	background: #ECECEC;
+	min-height: calc(100vh - 64px);
+	@media (max-width: 992px) {
+		padding: 0 0 60px;
+		min-height: calc(100vh - 124px);
+	}
+	@media (max-width: 450px) {
+		padding: 0 0 60px;
+		min-height: calc(100vh - 130px);
+	}
+	.content-box{
+		margin: auto;
+		max-width: 420px;
+		&.profile-box{
+			max-width: 640px;
+		}
+	}
+	.heading{
+		text-align: center;
+		font: normal normal 500 30px/1.1 Oswald;
+		letter-spacing: 0px;
+		color: #000000;
+		margin: 40px auto 30px;
+		@media (max-width: 450px){
+			font-size: 24px;
+		}
+	}
+	.box--white{
+		background: #fff;
+		padding: 40px;
+		@media (max-width: 450px){
+			padding: 30px;
+		}
+		.text--link{			
+			text-align: center;
+			font: normal normal normal 13px/18px Oswald;
+			letter-spacing: 0px;
+			color: #000000;
+			text-transform: uppercase;					
+			.link{
+				font: normal normal normal 13px/18px Oswald;
+				letter-spacing: 0px;
+				color: #000000;
+				opacity: 0.5;
+				@include transition;
+				&:hover{
+					opacity: 1;
+					text-decoration: underline;
+				}
+			}
+		}
+		.box--form{
+			.form{
+				display: grid;
+				grid-gap: 20px;
+			}
+			label{
+				display: block;
+				font: normal normal normal 14px/20px Montserrat;
+				letter-spacing: 0px;
+				color: #000000;
+				margin: 0 0 3px;
+				&.group--flex{
+					display: flex;
+					justify-content: space-between;
+					span{
+						font: normal normal 300 12px/16px Montserrat;
+						letter-spacing: 0px;
+						color: #757575;
+						position: relative;
+						top: 2px;
+					}
+				}
+			}
+			.group--input{
+				width: 100%;
+				background: #FFFFFF 0% 0% no-repeat padding-box;
+				height: 40px;
+				line-height: 40px;
+				padding: 0 15px;
+				border: 1px solid #999999;
+				outline: none;
+				border-radius: 0;
+				&:focus{
+					border-color: #333;
+				}
+				&.has--error{
+					border-color: #FF3333;
+				}
+			}
+			.group--select{
+				width: 100%;
+				position: relative;
+				select{
+					width: 100%;
+					outline: none;
+					border: 0;
+					border-radius: 0;
+					padding: 0 50px 0 15px;
+					background: #FFFFFF 0% 0% no-repeat padding-box;
+					height: 40px;
+					line-height: 40px;
+					border: 1px solid #999999;
+					outline: none;
+					border-radius: 0;
+					@include transition;
+					&:focus{
+						border-color: #333;
+					}
+					&.has--error{
+						border-color: #FF3333;
+					}
+				}
+				.select--icon{					
+					position: absolute;
+				    top: 1px;
+				    bottom: 1px;
+				    right: 1px;
+				    background: #fff;
+				    width: 38px;
+				    height: 38px;
+				}
+				svg{
+					position: absolute;
+					top: 10px;
+					bottom: 10px;
+					right: 10px;
+				}
+			}
+			.error--msg{
+				font: normal normal normal 12px/16px Montserrat;
+				color: #FF3333;
+				margin-top: 4px;
+			}
+			textarea.group--input{
+				height: 60px;
+				resize: none;
+			}
+			.small--text{
+				font: normal normal 300 12px/16px Montserrat;
+				letter-spacing: 0px;
+				color: #757575;
+				margin-top: 2px;
+			}
+			input[type=submit],
+			button[type=submit],
+			.group--submit{
+				width: 100%;
+				border: 0;
+				outline: none;
+				border-radius: 0;
+				background: #000;
+				color: #fff;
+				line-height: 40px;
+				text-align: center;
+				height: 40px;
+				font: normal normal normal 13px/18px Oswald;
+				text-transform: uppercase;
+				@include transition;
+				&:hover{
+					background: #383838;
+				}
+			}
+			.group--submit2{
+				width: auto !important;
+				display: table;
+				margin: auto;
+				border: 0;
+				outline: none;
+				border-radius: 0;
+				background: #000;
+				color: #fff;
+				line-height: 40px;
+				text-align: center;
+				height: 40px;
+				font: normal normal normal 13px/18px Oswald;
+				text-transform: uppercase; 
+				@include transition;
+				min-width: 265px;  
+				padding: 0 60px;
+				@media (max-width: 450px){
+					width: 100% !important;
+				}
+				&:hover{
+					background: #383838;
+				}
+			}
+			.group--link{
+				font: normal normal normal 13px/18px Oswald;
+				letter-spacing: 0px;
+				color: #000000;
+				opacity: 0.5;
+				margin: auto;
+				display: table;
+				@include transition;
+				&:hover{
+					opacity: 1;
+					text-decoration: underline;
+				}
+			}
+			.group--text{
+				font: normal normal 300 14px/20px Montserrat;
+				letter-spacing: 0px;
+				color: #757575;
+				a{
+					color: #757575;
+					text-decoration: underline;
+				}
+			}
+			.group--italic{
+				font: italic normal normal 16px/16px Gelasio;
+				letter-spacing: 0px;
+				color: #000000;
+				text-align: center;
+			}
+			.grid--2{
+				display: grid;
+				grid-template-columns: repeat(2, minmax(100px, 1fr));
+				grid-gap: 30px;
+				@media (max-width: 450px){
+					grid-template-columns: 1fr;
+					grid-gap: 20px;
+				}
+			}
+			.form--profile{
+				.profile--avatar{
+					width: 100px;
+					height: 100px;
+					margin: auto;
+					border-radius: 50%;
+					background: #F5F5F5;
+					position: relative;
+					svg{
+						position: absolute;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						top: 0;
+						margin: auto;
+					}
+					img{
+						max-width: 100%;
+						max-height: 100%;
+						object-fit: cover;
+					}
+				}
+				.profile--email{
+					text-align: center;
+					font: normal normal 300 14px/20px Montserrat;
+					letter-spacing: 0px;
+					color: #757575;
+					margin-top: 16px;
+				}
+				.profile--upload{
+					display: table;
+					border: 0;
+					outline: none;
+					border-radius: 0;
+					background: #000;
+					color: #fff;
+					padding: 0 25px;
+					text-align: center;
+					height: 35px;
+					margin: 20px auto 0;
+					font: normal normal normal 13px/35px Oswald;
+					text-transform: uppercase;
+					cursor: pointer;
+					pointer-events: auto;
+					@include transition;
+					&:hover{
+						background: #383838;
+					}
+					input{
+						opacity: 0;
+						position: absolute;
+						top: 0;
+					}
+				}
+			}
+		}
+		.box--line{
+			position: relative;
+			margin: 20px 0;
+			text-align: center;
+			&:after{
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				height: 1px;
+				top: 11px;
+				background: #E0E0E0;
+			}
+			span{
+				font: italic normal normal 16px/16px Gelasio;
+				letter-spacing: 0px;
+				color: #000000;
+				padding: 0 10px;
+				background: #fff;
+				position: relative;
+				z-index: 2;
+			}
+		}
+		.box--line2{
+			position: relative;
+			margin: 10px 0;
+			text-align: center;
+			&:after{
+				content: '';
+				position: absolute;
+				width: 100%;
+				display: block;
+				height: 1px;
+				background: #E0E0E0;
+			}
+		}
+		.box--actions{
+			display: grid;
+			grid-gap: 10px;
+			.action{
+				width: 100%;
+				.action--button{
+					width: 100%;
+					background: #E0E0E0;
+					padding: 0;
+					margin: 0;
+					border: 0;
+					border-radius: 0;
+					outline: none;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font: normal normal normal 13px/40px Oswald;
+					@include transition;
+					&:hover{
+						opacity: 0.6;
+					}
+					svg{
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer-login{
+	padding: 24px 0;
+	background: #000;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 16px;
+	color: #fff;
+	@media (max-width: 450px){
+		padding: 15px 0;
+		height: 70px;
+	}
+	.footer-box{		
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 450px){
+			display: block;
+			text-align: center;
+			line-height: 1.7;
+		}
+	}
+	.footer-copyright{
+		text-transform: uppercase;
+	}
+	.footer-text{
+		a{
+			font-weight: 600;
+			color: #fff;
+		}
+	}
+}
+.resend-msg{
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	box-shadow: 0px 8px 16px #00000029;
+	opacity: 1;
+	position: fixed;
+	top: -70px;
+	right: 7px;
+	font: normal normal 300 14px/20px Montserrat;
+	letter-spacing: 0px;
+	color: #000000;
+	line-height: 50px;
+	padding: 0 10px 0 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include transition-slow;
+	&.active{
+		top: 70px;
+	}
+	svg{
+		margin-right: 9px;
+	}
+}
