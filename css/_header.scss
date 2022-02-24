@@ -256,8 +256,6 @@
 		}
 	}
 	.header-middle{
-		float: left;
-		width: 100%;
 		padding: 20px 0;
 		.header-middle_logo{
 			float: left;
@@ -280,9 +278,8 @@
 		}
 	}
 	.header-bottom{
-		float: left;
-		width: 100%;
 		position: relative;
+		border-bottom: 1px solid #BDBDBD;
 		.container{
 			position: static;
 		}

@@ -243,6 +243,21 @@
 					grid-gap: 20px;
 				}
 			}
+			.group--back{
+				background: #E0E0E0;
+				font: normal normal normal 13px/18px Oswald;
+				letter-spacing: 0px;
+				color: #000000;
+				border: 0;
+				outline: none;
+				border-radius: 0;
+				line-height: 40px;
+				text-align: center;
+				height: 40px;
+				text-transform: uppercase; 
+				@include transition;
+				padding: 0 60px;
+			}
 			.form--profile{
 				.profile--avatar{
 					width: 100px;
@@ -251,6 +266,7 @@
 					border-radius: 50%;
 					background: #F5F5F5;
 					position: relative;
+					overflow: hidden;
 					svg{
 						position: absolute;
 						left: 0;

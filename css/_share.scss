@@ -269,3 +269,459 @@
 		padding-left: 0;
 	}
 }
+
+.tabs-box{
+	.tabs-title{
+		margin: 50px 0 20px;
+		font: normal normal 500 30px/33px Oswald;
+	}
+	.tabs{
+		display: flex;
+		border-top: 2px solid #000;
+		border-bottom: 1px solid #000;
+		.item{
+			padding: 9px 0 11px;
+			cursor: pointer;
+			pointer-events: auto;
+			position: relative;
+			font: normal normal normal 13px/20px Oswald;
+			+ .item{
+				margin-left: 30px;
+				@media (max-width: 450px){
+					margin-left: 15px;
+				}
+			}
+			&.active{
+				&:after, &:before {
+					bottom: 0;
+					left: 50%;
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					pointer-events: none;
+				}
+
+				&:after {
+					border-color: rgba(0, 0, 0, 0);
+					border-bottom-color: #000;
+					border-width: 2px;
+					margin-left: -2px;
+				}
+				&:before {
+					border-color: rgba(0, 0, 0, 0);
+					border-bottom-color: #000;
+					border-width: 5px;
+					margin-left: -5px;
+				}
+			}
+		}
+	}
+	.tabs-content{
+		.item{
+			padding: 40px 0;
+			.item--title{
+				font: normal normal normal 20px/24px Oswald;
+				letter-spacing: 0px;
+				color: #000000;
+				text-transform: uppercase;
+				padding-bottom: 7px;
+				border-bottom: 2px solid #000;
+			}
+			.item--list{
+				ul{
+					list-style-type: none;
+					padding: 0;
+					margin: 0;
+					@include flex;
+					width: calc(100% + 30px);
+					margin: 0 -15px;
+					li{
+						display: flex;
+						flex-wrap: wrap;
+						width: calc(100% / 3);
+						padding: 0 15px;	
+						margin: 20px 0;
+						border-right: 1px solid #e0e0e0;
+						position: relative;
+						@media (max-width: 767px){
+							width: 50%;
+						}
+						@media (max-width: 450px){
+							width: 100%;
+							border: 0;
+						}
+						&:after{
+							content: '';
+							display: block;
+							position: absolute;
+							left: -1px;
+							right: 0;
+							bottom: -20px;
+							border-bottom: 1px solid #e0e0e0;
+						}
+						&:nth-child(3n){
+							border-left: 0;
+							&:after{
+								left: 15px;
+							}
+						}	
+						&:nth-child(3n){
+							&:after{
+								right: 15px;
+							}
+						}
+						.thumb{
+							width: 100%;						
+						    position: relative;
+						    display: inline-block;
+						    vertical-align: middle;
+						    overflow: hidden;		
+							&:hover img{
+							    -webkit-transform: translate3d(0,0,0) scale(1.05);
+							    -moz-transform: translate3d(0,0,0) scale(1.05);
+							    transform: translate3d(0,0,0) scale(1.05);
+							}
+							img{
+							    -webkit-transform: translate3d(0,0,0);
+							    -moz-transform: translate3d(0,0,0);
+							    transform: translate3d(0,0,0);
+							    -webkit-transition: -webkit-transform .2s ease-in-out;
+							    transition: transform .2s ease-in-out;
+							    -webkit-filter: blur();
+							    will-change: transform;
+							    width: 100%;
+							}
+						}
+						.top{
+							margin-top: 15px;
+							@include flex;
+							.category{
+								font: normal normal 500 13px/20px Oswald;
+								letter-spacing: 0px;
+								color: #000000;
+							}
+							.time{
+								font: normal normal 300 12px/16px Montserrat;
+								letter-spacing: 0px;
+								color: #757575;
+								margin-left: 8px;
+								position: relative;
+								top: 4px;
+							}
+						}
+						.title{
+							margin-top: 11px;
+							font: normal normal 500 18px/24px Gelasio;
+							letter-spacing: 0px;
+							color: #000000;
+							a{
+								font: normal normal 500 18px/24px Gelasio;
+								letter-spacing: 0px;
+								color: #000000;
+								&:hover{
+									text-decoration: underline;
+								}
+							}
+						}
+						.bottom{
+							@include flex;
+							justify-content: space-between;
+							margin-top: 15px;
+							width: 100%;
+							.status{
+								margin-top: 8px;
+								display: block;
+								&.orange{
+									span{										
+										background: #F57F17;
+									}
+								}
+								&.red{
+									span{										
+										background: #B71C1C;
+									}
+								}
+								&.gray{
+									span{										
+										background: #E0E0E0;
+										color: #000;
+									}
+								}
+								span{									
+									padding: 4px 12px 5px 12px;
+									border-radius: 50px;
+									font: normal normal 300 12px/16px Montserrat;
+									letter-spacing: 0px;
+									color: #FFFFFF;
+								}
+							}
+							.actions{
+								@include flex;
+								> *{
+									width: 40px;
+									height: 40px;
+									position: relative;
+									cursor: pointer;
+									pointer-events: auto;
+									svg{
+										position: absolute;
+										top: 0;
+										left: 0;
+										right: 0;
+										bottom: 0;
+										margin: auto;
+									}
+								}
+							}
+						}
+						.bottom2{
+							@include flex;
+							justify-content: space-between;
+							margin-top: 10px;
+							width: 100%;
+							.auth{
+								display: flex;
+								padding: 5px 0;
+								.auth--avatar{
+									width: 30px;
+									height: 30px;
+									border-radius: 50%;
+									overflow: hidden;
+									img{
+										width: 100%;
+										height: 100%;
+										object-fit: cover;
+									}
+								}
+								.auth--name{
+									margin-left: 8px;
+									font: normal normal 500 14px/30px Gelasio;
+									overflow: hidden;
+									text-overflow: ellipsis;
+									white-space: nowrap;
+								}
+							}
+							.other{
+								display: flex;
+								.other--likes{
+									line-height: 40px;
+									margin-right: 15px;
+									svg{
+									    position: relative;
+									    top: 3px;
+									    margin-right: 2px;
+									}
+								}
+								.other--saved{
+									width: 40px;
+									height: 40px;
+									text-align: center;
+									line-height: 40px;
+									position: relative;
+									svg{
+										position: absolute;
+										top: 0;
+										left: 0;
+										right: 0;
+										bottom: 0;
+										margin: auto;
+									}
+								}
+							}
+						}
+						.topic{
+							margin-top: 15px;
+							display: grid;
+							grid-template-columns: 1fr 120px;
+							width: 100%;
+							.information{
+								.name{
+									font: normal normal normal 24px/29px Oswald;
+									letter-spacing: 0px;
+									color: #000000;
+								}
+								.articles{
+									font: normal normal 500 14px/22px Gelasio;
+									letter-spacing: 0px;
+									color: #000000;
+									margin-top: 5px;
+								}
+							}
+							.cta{
+								text-align: right;
+								display: flex;
+								align-items: center;
+								justify-content: flex-end;
+								.cta--following{
+									padding: 0 20px;
+									height: 40px;
+									display: inline-block;
+									border: 1px solid #000;
+									text-align: center;
+									font: normal normal normal 13px/38px Oswald;
+									letter-spacing: 0px;
+									text-transform: uppercase;
+									min-width: 106px;
+									@include transition;
+									color: #000;
+									background: transparent;
+								}
+							}
+						}
+					}
+				}
+			}
+			.item--authors{
+				ul{
+					list-style-type: none;
+					padding: 0;
+					margin: 0;
+					@include flex;
+					width: calc(100% + 30px);
+					margin: 0 -15px;
+					li{
+						display: flex;
+						flex-wrap: wrap;
+						width: calc(100% / 6);
+						padding: 0 15px 55px 15px;	
+						margin: 20px 0;
+						border-right: 1px solid #e0e0e0;
+						position: relative;
+						@media (max-width: 1200px){
+							width: 25%;
+						}
+						@media (max-width: 767px){
+							width: 50%;
+						}
+						@media (max-width: 450px){
+							width: 100%;
+							border: 0;
+						}
+						&:after{
+							content: '';
+							display: block;
+							position: absolute;
+							left: -1px;
+							right: 0;
+							bottom: -20px;
+							border-bottom: 1px solid #e0e0e0;
+						}
+						&:nth-child(3n){
+							border-left: 0;
+							&:after{
+								left: 15px;
+							}
+						}	
+						&:nth-child(3n){
+							&:after{
+								right: 15px;
+							}
+						}
+						.thumb{
+							width: 100%;						
+						    position: relative;
+						    display: inline-block;
+						    vertical-align: middle;
+						    overflow: hidden;		
+							&:hover img{
+							    -webkit-transform: translate3d(0,0,0) scale(1.05);
+							    -moz-transform: translate3d(0,0,0) scale(1.05);
+							    transform: translate3d(0,0,0) scale(1.05);
+							}
+							img{
+							    -webkit-transform: translate3d(0,0,0);
+							    -moz-transform: translate3d(0,0,0);
+							    transform: translate3d(0,0,0);
+							    -webkit-transition: -webkit-transform .2s ease-in-out;
+							    transition: transform .2s ease-in-out;
+							    -webkit-filter: blur();
+							    will-change: transform;
+							    width: 100%;
+							}
+						}
+						.name{
+							font: normal normal normal 20px/24px Oswald;
+							letter-spacing: 0px;
+							color: #000000;
+							margin-top: 15px;
+							width: 100%;
+						}
+						.position{
+							font: normal normal 300 12px/16px Montserrat;
+							letter-spacing: 0px;
+							color: #000000;
+							margin-top: 5px;
+							width: 100%;
+						}
+						.company{
+							margin-top: 10px;
+							font: normal normal normal 13px/20px Montserrat;
+							letter-spacing: 0px;
+							color: #000000;
+							text-transform: uppercase;
+							width: 100%;
+						}
+						.cta--following{
+							padding: 0 20px;
+							height: 40px;
+							display: inline-block;
+							border: 1px solid #000;
+							text-align: center;
+							font: normal normal normal 13px/38px Oswald;
+							letter-spacing: 0px;
+							text-transform: uppercase;
+							min-width: 106px;
+							@include transition;
+							color: #000;
+							background: transparent;
+							position: absolute;
+							bottom: 0;
+							left: 15px;
+							right: 15px;
+						}
+					}
+				}
+			}
+			.item--not{
+				padding: 120px 0 80px;
+				display: table;
+				margin: auto;
+				span{
+					display: block;
+					text-align: center;
+					font: italic normal normal 16px/16px Gelasio;
+				}
+				.button{
+					padding: 0 20px;
+				    height: 40px;
+				    display: inline-block;
+				    border: 1px solid #000;
+				    text-align: center;
+				    font: normal normal normal 13px/38px Oswald;
+				    letter-spacing: 0px;
+				    color: #000;
+				    background: transparent;
+				    text-transform: uppercase;
+				    min-width: 106px;
+				    transition: all 0.2s ease-out 0s;
+				    -webkit-transition: all 0.2s ease-out 0s;
+				    margin-top: 20px;
+				}
+			}
+			.item--more{
+				display: table;
+				margin: 30px auto auto;
+				padding: 0 20px;
+				line-height: 38px;
+				border: 1px solid #000;
+				text-transform: uppercase;
+				font-size: 13px;
+				cursor: pointer;
+				pointer-events: auto;
+				@include transition;
+			}
+		}
+	}
+}
