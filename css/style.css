@@ -315,6 +315,7 @@ img {
   font: normal normal 500 18px/24px Gelasio;
   letter-spacing: 0px;
   color: #000000;
+  width: 100%;
 }
 .tabs-box .tabs-content .item .item--list ul li .title a {
   font: normal normal 500 18px/24px Gelasio;
@@ -2991,6 +2992,55 @@ perspective effects (not including the modals and the overlay).
   text-transform: uppercase;
   margin: 0;
 }
+.content-breadcrumbs .content-breadcrumbs_cate {
+  float: left;
+  width: 100%;
+  margin: 20px 0;
+  padding: 60px;
+  color: #fff;
+  background: center/cover;
+  text-align: center;
+  position: relative;
+}
+.content-breadcrumbs .content-breadcrumbs_cate:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.content-breadcrumbs .content-breadcrumbs_cate .cate--title {
+  font: normal normal normal 36px/40px Oswald;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  margin: 0;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 9;
+}
+.content-breadcrumbs .content-breadcrumbs_cate .cate--text {
+  font: normal normal 300 16px/24px Montserrat;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  max-width: 770px;
+  margin: 15px auto auto;
+  position: relative;
+  z-index: 9;
+}
+.content-breadcrumbs .content-breadcrumbs_cate .cate--follow {
+  display: table;
+  margin: 30px auto auto;
+  padding: 0 40px;
+  background: #fff;
+  font: normal normal normal 13px/40px Oswald;
+  letter-spacing: 0px;
+  color: #000000;
+  position: relative;
+  z-index: 9;
+  text-transform: uppercase;
+}
 .content-breadcrumbs .content-breadcrumbs_tabs {
   float: left;
   width: 100%;
@@ -4848,6 +4898,9 @@ perspective effects (not including the modals and the overlay).
   padding: 20px 0 40px;
   background: #f5f5f5;
 }
+.content-sublisting.style--2 .content-sublisting_box .box__item .box__item__caption .item__caption__heading {
+  margin: 5px 0 0;
+}
 .content-sublisting .content-sublisting_box {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -4926,6 +4979,64 @@ perspective effects (not including the modals and the overlay).
   font-size: 11.5px;
   color: #757575;
   font-family: "Montserrat", "Arial", sans-serif;
+}
+.content-sublisting .content-sublisting_box .box__item .box__item__caption .item__caption__bottom {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+.content-sublisting .content-sublisting_box .box__item .box__item__caption .item__caption__bottom .auth {
+  display: flex;
+  padding: 5px 0;
+}
+.content-sublisting .content-sublisting_box .box__item .box__item__caption .item__caption__bottom .auth .auth--avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.content-sublisting .content-sublisting_box .box__item .box__item__caption .item__caption__bottom .auth .auth--avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content-sublisting .content-sublisting_box .box__item .box__item__caption .item__caption__bottom .auth .auth--name {
+  margin-left: 8px;
+  font: normal normal 500 14px/30px Gelasio;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.content-sublisting .content-sublisting_box .box__item .box__item__caption .item__caption__bottom .other {
+  display: flex;
+}
+.content-sublisting .content-sublisting_box .box__item .box__item__caption .item__caption__bottom .other .other--likes {
+  line-height: 40px;
+  margin-right: 15px;
+}
+.content-sublisting .content-sublisting_box .box__item .box__item__caption .item__caption__bottom .other .other--likes svg {
+  position: relative;
+  top: 3px;
+  margin-right: 2px;
+}
+.content-sublisting .content-sublisting_box .box__item .box__item__caption .item__caption__bottom .other .other--saved {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  position: relative;
+}
+.content-sublisting .content-sublisting_box .box__item .box__item__caption .item__caption__bottom .other .other--saved svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 .content-sublisting .content-sublisting_load {
   display: table;
