@@ -3497,11 +3497,13 @@
 				width: 100%;
 				margin-top: 10px;
 				.heading__auth{
-					float: left;
+				    display: flex;
+				    flex-flow: row wrap;
+				    align-items: center;
 					.heading__auth__avatar{
 						float: left;
-						width: 30px;
-						height: 30px;
+						width: 60px;
+						height: 60px;
 						border-radius: 50%;
 						overflow: hidden;
 						img{
@@ -3510,21 +3512,26 @@
 						}
 					}
 					.heading__auth__box{
-						float: left;
+						display: grid;
+						grid-gap: 4px;
+						margin-left: 10px;
 						.heading__auth__name{
-							margin-left: 10px;
-							float: left;
-							font-size: 14px;
+							font-size: 16px;
 							@include gelasio;
-							line-height: 30px;
+							line-height: 22px;
+							color: #000;
+						}
+						.heading__auth__position{
+							font-size: 12px;
+							color: #000;
+							@include montserrat;
+							line-height: 20px;
 						}
 						.heading__auth__publish{
-							float: left;
-							margin-left: 30px;
 							font-size: 12px;
 							color: #757575;
 							@include montserrat;
-							line-height: 30px;
+							line-height: 16px;
 						}						
 					}
 				}
@@ -3561,11 +3568,14 @@
 						li{
 							float: left;
 							width: 40px;
-							height: 40px;
-							line-height: 40px;
 							text-align: center;
 							+ li{
 								margin-top: 10px;
+							}
+							span{
+								font: normal normal 300 13px/20px Montserrat;
+								letter-spacing: 0px;
+								color: #000000;
 							}
 							a{
 								display: block;
@@ -3573,10 +3583,73 @@
 								@include transition;
 								font-size: 16px;
 								background: #e0e0e0;
+								position: relative;
+								width: 40px;
+								height: 40px;
+								line-height: 40px;
+								cursor: pointer;
+								pointer-events: auto;
 								&:hover{
 									background: #757575;
-									color: #fff;
+									svg path:nth-child(2){
+										fill: #fff;
+									}
 								}
+								svg{
+									position: absolute;
+									top: 0;
+									left: 0;
+									right: 0;
+									bottom: 0;
+									margin: auto;
+									path{
+										@include transition;
+									}
+								}
+							}
+							.action{
+								display: block;
+								color: #757575;
+								@include transition;
+								font-size: 16px;
+								background: #e0e0e0;
+								position: relative;
+								width: 40px;
+								height: 40px;
+								line-height: 40px;
+								cursor: pointer;
+								pointer-events: auto;
+								&:not(.actived):hover{
+									background: #757575;
+									svg path:nth-child(2){
+										fill: #fff;
+									}
+								}
+								&.actived{
+									svg{
+										&.action--actived{
+											opacity: 1;
+										}
+										&.action--default{
+											opacity: 0;
+										}
+									}
+								}
+								svg{
+									position: absolute;
+									top: 0;
+									left: 0;
+									right: 0;
+									bottom: 0;
+									margin: auto;
+									@include transition;
+									&.action--actived{
+										opacity: 0;
+									}
+									path{
+										@include transition;
+									}
+								}								
 							}
 						}
 					}
@@ -3591,9 +3664,7 @@
 						@include montserrat;
 						font-size: 16px;
 						font-weight: normal;
-						> p, > b, > strong, > h1, > h2, > h3, > h4, > h5, > h6{
-							padding: 0 calc(100% / 9);
-						}
+							padding: 5px calc(100% / 9) 0;
 						> p{
 							margin-bottom: 25px;
 						}

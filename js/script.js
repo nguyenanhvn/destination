@@ -341,6 +341,25 @@ jQuery(document).ready(function() {
     		jQuery(this).closest('.tabs-box').find('#' + jQuery(this).attr('data')).show();
     	}
     });
+
+    // Article Detail
+    jQuery(document).on('click', '.content__share .share--save, .scroll__share .share--save', function(){
+    	jQuery(this).find('.action').toggleClass('actived');
+    	jQuery('.resend-msg.saved').addClass('active');
+        setTimeout(function(){
+            jQuery('.resend-msg.saved').removeClass('active');
+        }, 3000);
+    });
+    jQuery(document).on('click', '.content__share .share--like, .scroll__share .share--like', function(){
+    	jQuery(this).find('.action').toggleClass('actived');
+    	jQuery('.resend-msg.liked').addClass('active');
+        setTimeout(function(){
+            jQuery('.resend-msg.liked').removeClass('active');
+        }, 3000);
+    });
+    jQuery(document).on('click', '.scroll__share .share--more', function(){
+    	jQuery(this).toggleClass('active');
+    })
 });
 
 function header(){

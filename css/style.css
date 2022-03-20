@@ -2816,7 +2816,6 @@ perspective effects (not including the modals and the overlay).
   z-index: 10000;
   opacity: 0;
   visibility: hidden;
-  overflow: hidden;
   transition: all 0.2s ease-out 0s;
   -webkit-transition: all 0.2s ease-out 0s;
 }
@@ -2849,6 +2848,7 @@ perspective effects (not including the modals and the overlay).
   font-family: "Gelasio", "Arial", sans-serif;
   overflow: hidden;
   flex-grow: 1;
+  height: 60px;
 }
 #content-heading_scroll .scroll__name:after {
   background-image: -webkit-gradient(linear, right top, left top, color-stop(20%, #fff), to(rgba(255, 255, 255, 0)));
@@ -2869,19 +2869,6 @@ perspective effects (not including the modals and the overlay).
   display: flex;
   height: 100%;
 }
-#content-heading_scroll .scroll__share span {
-  display: block;
-  float: left;
-  line-height: 60px;
-  font-size: 12px;
-  letter-spacing: 1px;
-  -ms-flex-item-align: center;
-  align-self: center;
-  color: #7a7a7a;
-  font-weight: 300;
-  margin: 0 16px;
-  text-transform: uppercase;
-}
 #content-heading_scroll .scroll__share ul {
   -ms-flex-item-align: center;
   align-self: center;
@@ -2892,31 +2879,121 @@ perspective effects (not including the modals and the overlay).
   border-left: 1px solid #e6e6e6;
 }
 #content-heading_scroll .scroll__share ul li {
-  display: inline-block;
-  float: left;
-  width: 60px;
-  text-align: center;
-  line-height: 60px;
+  min-width: 60px;
   border-right: 1px solid #e6e6e6;
 }
-#content-heading_scroll .scroll__share ul li a {
-  color: #7a7a7a;
-  display: block;
-  font-size: 18px;
+#content-heading_scroll .scroll__share ul li .action {
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+  pointer-events: auto;
+}
+#content-heading_scroll .scroll__share ul li.share--like {
+  padding: 0 15px 0 40px;
+  position: relative;
+}
+#content-heading_scroll .scroll__share ul li.share--like .action.actived .action--actived {
+  opacity: 1;
+}
+#content-heading_scroll .scroll__share ul li.share--like .action.actived .action--default {
+  opacity: 0;
+}
+#content-heading_scroll .scroll__share ul li.share--like .action svg {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  bottom: 0;
+  margin: auto;
   transition: all 0.2s ease-out 0s;
   -webkit-transition: all 0.2s ease-out 0s;
 }
-#content-heading_scroll .scroll__share ul li a:hover {
-  background: #757575;
+#content-heading_scroll .scroll__share ul li.share--like .action svg.action--actived {
+  opacity: 0;
+}
+#content-heading_scroll .scroll__share ul li.share--like span {
+  font-size: 14px;
+  font-weight: normal;
+  font-family: Montserrat;
+  color: #000;
+}
+#content-heading_scroll .scroll__share ul li.share--save {
+  position: relative;
+}
+#content-heading_scroll .scroll__share ul li.share--save .action.actived .action--actived {
+  opacity: 1;
+}
+#content-heading_scroll .scroll__share ul li.share--save .action.actived .action--default {
+  opacity: 0;
+}
+#content-heading_scroll .scroll__share ul li.share--save .action svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+}
+#content-heading_scroll .scroll__share ul li.share--save .action svg.action--actived {
+  opacity: 0;
+}
+#content-heading_scroll .scroll__share ul li.share--more {
+  position: relative;
+}
+#content-heading_scroll .scroll__share ul li.share--more .action svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+#content-heading_scroll .scroll__share ul li.share--more.active .more--dropdown {
+  opacity: 1;
+  visibility: visible;
+  top: 62px;
+}
+#content-heading_scroll .scroll__share ul li.share--more .more--dropdown {
+  padding: 10px 0;
+  position: absolute;
+  top: 72px;
+  right: 0;
+  width: 200px;
+  background: #fff;
+  box-shadow: 0px 8px 16px #00000029;
+  opacity: 0;
+  overflow: hidden;
+}
+#content-heading_scroll .scroll__share ul li.share--more .more--dropdown .item {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-gap: 10px;
+  padding: 10px 15px;
+  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+}
+#content-heading_scroll .scroll__share ul li.share--more .more--dropdown .item:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+#content-heading_scroll .scroll__share ul li.share--more .more--dropdown .item:hover svg path:nth-child(2) {
+  fill: #fff;
+}
+#content-heading_scroll .scroll__share ul li.share--more .more--dropdown .item:hover .item--text {
   color: #fff;
 }
+#content-heading_scroll .scroll__share ul li.share--more .more--dropdown .item .item--text {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: Montserrat;
+  color: #000;
+}
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   #content-heading_scroll .container {
     padding: 0;
-  }
-  #content-heading_scroll .scroll__share span {
-    display: none;
+    width: 100%;
+    max-width: 100%;
   }
 }
 /* Content Breadcrumbs */
@@ -6315,12 +6392,14 @@ perspective effects (not including the modals and the overlay).
   margin-top: 10px;
 }
 .content-article_heading .content-article_heading__box .heading_more .heading__auth {
-  float: left;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
 .content-article_heading .content-article_heading__box .heading_more .heading__auth .heading__auth__avatar {
   float: left;
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -6329,22 +6408,27 @@ perspective effects (not including the modals and the overlay).
   height: 100%;
 }
 .content-article_heading .content-article_heading__box .heading_more .heading__auth .heading__auth__box {
-  float: left;
+  display: grid;
+  grid-gap: 4px;
+  margin-left: 10px;
 }
 .content-article_heading .content-article_heading__box .heading_more .heading__auth .heading__auth__box .heading__auth__name {
-  margin-left: 10px;
-  float: left;
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Gelasio", "Arial", sans-serif;
-  line-height: 30px;
+  line-height: 22px;
+  color: #000;
+}
+.content-article_heading .content-article_heading__box .heading_more .heading__auth .heading__auth__box .heading__auth__position {
+  font-size: 12px;
+  color: #000;
+  font-family: "Montserrat", "Arial", sans-serif;
+  line-height: 20px;
 }
 .content-article_heading .content-article_heading__box .heading_more .heading__auth .heading__auth__box .heading__auth__publish {
-  float: left;
-  margin-left: 30px;
   font-size: 12px;
   color: #757575;
   font-family: "Montserrat", "Arial", sans-serif;
-  line-height: 30px;
+  line-height: 16px;
 }
 
 .content-article {
@@ -6380,12 +6464,15 @@ perspective effects (not including the modals and the overlay).
 .content-article .content-article_box .article__content .content__share ul li {
   float: left;
   width: 40px;
-  height: 40px;
-  line-height: 40px;
   text-align: center;
 }
 .content-article .content-article_box .article__content .content__share ul li + li {
   margin-top: 10px;
+}
+.content-article .content-article_box .article__content .content__share ul li span {
+  font: normal normal 300 13px/20px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
 }
 .content-article .content-article_box .article__content .content__share ul li a {
   display: block;
@@ -6394,10 +6481,73 @@ perspective effects (not including the modals and the overlay).
   -webkit-transition: all 0.2s ease-out 0s;
   font-size: 16px;
   background: #e0e0e0;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  pointer-events: auto;
 }
 .content-article .content-article_box .article__content .content__share ul li a:hover {
   background: #757575;
-  color: #fff;
+}
+.content-article .content-article_box .article__content .content__share ul li a:hover svg path:nth-child(2) {
+  fill: #fff;
+}
+.content-article .content-article_box .article__content .content__share ul li a svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.content-article .content-article_box .article__content .content__share ul li a svg path {
+  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+}
+.content-article .content-article_box .article__content .content__share ul li .action {
+  display: block;
+  color: #757575;
+  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+  font-size: 16px;
+  background: #e0e0e0;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.content-article .content-article_box .article__content .content__share ul li .action:not(.actived):hover {
+  background: #757575;
+}
+.content-article .content-article_box .article__content .content__share ul li .action:not(.actived):hover svg path:nth-child(2) {
+  fill: #fff;
+}
+.content-article .content-article_box .article__content .content__share ul li .action.actived svg.action--actived {
+  opacity: 1;
+}
+.content-article .content-article_box .article__content .content__share ul li .action.actived svg.action--default {
+  opacity: 0;
+}
+.content-article .content-article_box .article__content .content__share ul li .action svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+}
+.content-article .content-article_box .article__content .content__share ul li .action svg.action--actived {
+  opacity: 0;
+}
+.content-article .content-article_box .article__content .content__share ul li .action svg path {
+  transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
 }
 .content-article .content-article_box .article__content .content__detail {
   float: left;
@@ -6410,9 +6560,7 @@ perspective effects (not including the modals and the overlay).
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-weight: normal;
-}
-.content-article .content-article_box .article__content .content__detail .content__detail__paragraph > p, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > b, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > strong, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > h1, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > h2, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > h3, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > h4, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > h5, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > h6 {
-  padding: 0 calc(100% / 9);
+  padding: 5px calc(100% / 9) 0;
 }
 .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > p {
   margin-bottom: 25px;
@@ -6979,6 +7127,9 @@ perspective effects (not including the modals and the overlay).
 }
 .resend-msg.active {
   top: 70px;
+}
+.resend-msg.liked.active {
+  top: 130px;
 }
 .resend-msg svg {
   margin-right: 9px;

@@ -430,6 +430,9 @@
 	&.active{
 		top: 70px;
 	}
+	&.liked.active{
+		top: 130px;
+	}
 	svg{
 		margin-right: 9px;
 	}

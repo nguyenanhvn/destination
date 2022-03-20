@@ -1119,7 +1119,7 @@
 	z-index: 10000;
 	opacity: 0;
 	visibility: hidden;
-    overflow: hidden;
+    // overflow: hidden;
     @include transition;
     &.active{
     	opacity: 1;
@@ -1150,6 +1150,7 @@
 	    @include gelasio;
 	    overflow: hidden;
 	    flex-grow: 1;
+	    height: 60px;
 	    &:after{
 	    	background-image: -webkit-gradient(linear, right top, left top, color-stop(20%, #fff), to(rgba(255, 255, 255, 0)));
 		    background-image: -o-linear-gradient(right, #fff 20%, rgba(255, 255, 255, 0));
@@ -1169,19 +1170,6 @@
 	    display: -ms-flexbox;
 	    display: flex;
 	    height: 100%;
-		span{
-			display: block;
-			float: left;
-			line-height: 60px;
-			font-size: 12px;
-		    letter-spacing: 1px;
-		    -ms-flex-item-align: center;
-		    align-self: center;
-		    color: #7a7a7a;
-		    font-weight: 300;
-		    margin: 0 16px;
-		    text-transform: uppercase;
-		}
 		ul{
 			-ms-flex-item-align: center;
 		    align-self: center;
@@ -1191,20 +1179,119 @@
 		    height: 100%;
 			border-left: 1px solid #e6e6e6;
 			li{
-				display: inline-block;
-				float: left;
-				width: 60px;
-				text-align: center;
-				line-height: 60px;
+				min-width: 60px;
 				border-right: 1px solid #e6e6e6;
-				a{
-					color: #7a7a7a;
-					display: block;
-					font-size: 18px;
-					@include transition;
-					&:hover{
-						background: #757575;
-						color: #fff;
+				.action{
+					line-height: 60px;
+					text-align: center;
+					cursor: pointer;
+					pointer-events: auto;
+				}
+				&.share--like{
+					padding: 0 15px 0 40px;
+					position: relative;
+					.action{
+						&.actived{
+							.action--actived{
+								opacity: 1;
+							}
+							.action--default{
+								opacity: 0;
+							}
+						}
+						svg{
+							position: absolute;
+							top: 0;
+							left: 15px;
+							bottom: 0;
+							margin: auto;
+							@include transition;
+							&.action--actived{
+								opacity: 0;
+							}
+						}
+					}
+					span{
+						font-size: 14px;
+						font-weight: normal;
+						font-family: Montserrat;
+						color: #000;
+					}
+				}
+				&.share--save{
+					position: relative;
+					.action{
+						&.actived{
+							.action--actived{
+								opacity: 1;
+							}
+							.action--default{
+								opacity: 0;
+							}
+						}
+						svg{
+							position: absolute;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							margin: auto;
+							@include transition;
+							&.action--actived{
+								opacity: 0;
+							}
+						}
+					}
+				}
+				&.share--more{
+					position: relative;
+					.action svg{
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						margin: auto;
+					}
+					&.active{
+						.more--dropdown{
+							opacity: 1;
+							visibility: visible;
+							top: 62px;
+						}
+					}
+					.more--dropdown{
+						padding: 10px 0;
+						position: absolute;
+						top: 72px;
+						right: 0;
+						width: 200px;
+						background: #fff;
+						box-shadow: 0px 8px 16px #00000029;
+						opacity: 0;
+						overflow: hidden;
+						.item{
+							display: grid;
+							grid-template-columns: 20px 1fr;
+							grid-gap: 10px;
+							padding: 10px 15px;
+							@include transition;
+							&:hover{
+								background: rgba(0,0,0,0.5);
+								svg path:nth-child(2){
+									fill: #fff;
+								}
+								.item--text{
+									color: #fff;
+								}
+							}
+							.item--text{
+								font-size: 14px;
+								font-weight: 600;
+								font-family: Montserrat;
+								color: #000;
+							}
+						}
 					}
 				}
 			}
@@ -1212,13 +1299,12 @@
 	}
 }
 
-@media (max-width: 767px){
+@media (max-width: 992px){
 	#content-heading_scroll{
 		.container{
 			padding: 0;
-		}
-		.scroll__share span{
-			display: none;
+			width: 100%;
+			max-width: 100%;
 		}
 	}
 }
