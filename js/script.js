@@ -360,6 +360,14 @@ jQuery(document).ready(function() {
     jQuery(document).on('click', '.scroll__share .share--more', function(){
     	jQuery(this).toggleClass('active');
     })
+    jQuery(document).on('click', '.cate--follow', function(){
+    	if(jQuery(this).hasClass('following')){
+    		jQuery(this).find('span').text('Follow');
+    	} else {
+    		jQuery(this).find('span').text('Following');
+    	}
+    	jQuery(this).toggleClass('following');
+    })
 });
 
 function header(){
