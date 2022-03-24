@@ -4040,3 +4040,35 @@
 			}
 		}
 	}
+
+/* New Article */
+	.new-article{
+		padding: 40px 0 50px;
+		.box{
+			.box-top{
+				display: flex;
+				justify-content: space-between;
+				.box-heading{
+					font: normal normal 500 30px/33px Oswald;
+					letter-spacing: 0px;
+					color: #000000;
+				}
+				.box-actions{
+					.action{
+						height: 40px;
+						border: 1px solid #000000;
+						line-height: 38px;
+						min-width: 40px;
+						text-align: center;
+						padding: 0 25px;
+						&.action--delete{
+							padding: 0;
+						}
+					}
+				}
+			}
+			.box-bottom{
+				padding-top: 40px;
+			}
+		}
+	}
