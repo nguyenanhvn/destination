@@ -724,12 +724,12 @@
                                     <path d="M14.5,5.333h4.167V7H17V17.833a.833.833,0,0,1-.833.833H4.5a.833.833,0,0,1-.833-.833V7H2V5.333H6.167v-2.5A.833.833,0,0,1,7,2h6.667a.833.833,0,0,1,.833.833ZM15.333,7h-10V17h10Zm-7.5,2.5H9.5v5H7.833Zm3.333,0h1.667v5H11.167ZM7.833,3.667V5.333h5V3.667Z" transform="translate(-0.333 -0.333)" />
                                 </svg>
                             </div>
-                            <div class="action">
+                            <button class="action">
                                 SAVE AS DRAFT
-                            </div>
-                            <div class="action action--publish">
+                            </button>
+                            <button class="action action--publish">
                                 Publish
-                            </div>
+                            </button>
                         </div>
                     </div>
                     <div class="box-bottom">
@@ -739,7 +739,7 @@
                                 <input id="add_title" type="text" name="" value="" placeholder="">
                             </div>
                             <div class="box-editor">
-                                <div id="editor" style="height: 800px; background: #f5f5f5">
+                                <div id="editor" style="height: 400px; background: #f5f5f5">
                                 </div>
                             </div>
                         </div>
@@ -747,57 +747,52 @@
                             <div class="child">
                                 <h3 class="child--title">Category</h3>
                                 <div class="child--dropdown">
-                                    <ul>
-                                        <li>
-                                            <div class="checkbox--box">
-                                                <label>
-                                                    <input type="checkbox" name="" value="" placeholder="">
-                                                    <div class="box--square"></div>
-                                                    <span>Exploring</span>
-                                                </label>
-                                                </span>
-                                                <ul>
-                                                    <li>
-                                                        <div class="checkbox--box">
-                                                            <label>
-                                                                <input type="checkbox" name="" value="" placeholder="">
-                                                                <div class="box--square"></div>
-                                                                <span>Exploring</span>
-                                                            </label>
-                                                            </span>
-                                                    </li>
-                                                    <li>
-                                                        <div class="checkbox--box">
-                                                            <label>
-                                                                <input type="checkbox" name="" value="" placeholder="">
-                                                                <div class="box--square"></div>
-                                                                <span>Exploring</span>
-                                                            </label>
-                                                            </span>
-                                                    </li>
-                                                    <li>
-                                                        <div class="checkbox--box">
-                                                            <label>
-                                                                <input type="checkbox" name="" value="" placeholder="">
-                                                                <div class="box--square"></div>
-                                                                <span>Exploring</span>
-                                                            </label>
-                                                            </span>
-                                                    </li>
-                                                </ul>
+                                    <ul id="categorychecklist" data-wp-lists="list:category" class="categorychecklist form-no-clear">
+                                        <li id="category-56" class="popular-category wpseo-term-unchecked"><label class="selectit"><input value="56" type="checkbox" name="post_category[]" id="in-category-56"> Agenda des Événements</label>
+                                            <ul class="children">
+                                                <li id="category-92" class="wpseo-term-unchecked"><label class="selectit"><input value="92" type="checkbox" name="post_category[]" id="in-category-92"> 123</label></li>
+                                            </ul>
                                         </li>
+                                        <li id="category-1" class="popular-category wpseo-term-unchecked"><label class="selectit"><input value="1" type="checkbox" name="post_category[]" id="in-category-1"> Conférences</label></li>
+                                        <li id="category-58" class="popular-category wpseo-term-unchecked"><label class="selectit"><input value="58" type="checkbox" name="post_category[]" id="in-category-58"> Foire/Exposition</label></li>
+                                        <li id="category-60" class="popular-category wpseo-term-unchecked"><label class="selectit"><input value="60" type="checkbox" name="post_category[]" id="in-category-60"> News</label></li>
+                                        <li id="category-68" class="popular-category wpseo-term-unchecked"><label class="selectit"><input value="68" type="checkbox" name="post_category[]" id="in-category-68"> Press Release</label></li>
+                                        <li id="category-57" class="popular-category wpseo-term-unchecked"><label class="selectit"><input value="57" type="checkbox" name="post_category[]" id="in-category-57"> Séminaire/Webinaire</label></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="child">
-                                <h3 class="child--title">Category</h3>
+                                <h3 class="child--title">Tags</h3>
                                 <div class="child--form">
-                                    <label for="add_tags">Add tags</label>
-                                    <div class="form--input">
-                                        <input type="text" name="" value="" placeholder="Enter text">
-                                        <button type="button">Add</button>
+                                    <div class="inside">
+                                        <div class="tagsdiv" id="post_tag">
+                                            <div class="jaxtag">
+                                                <div class="nojs-tags hide-if-js">
+                                                    <label for="tax-input-post_tag">Add or remove tags</label>
+                                                    <p><textarea name="tax_input[post_tag]" rows="3" cols="20" class="the-tags" id="tax-input-post_tag" aria-describedby="new-tag-post_tag-desc"></textarea></p>
+                                                </div>
+                                                <div class="ajaxtag hide-if-no-js">
+                                                    <label class="screen-reader-text" for="new-tag-post_tag">Add New Tag</label>
+                                                    <input data-wp-taxonomy="post_tag" type="text" id="new-tag-post_tag" name="newtag[post_tag]" class="newtag form-input-tip ui-autocomplete-input" size="16" autocomplete="off" aria-describedby="new-tag-post_tag-desc" value="" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="ui-id-1">
+                                                    <input type="button" class="button tagadd" value="Add">
+                                                </div>
+                                                <p class="howto" id="new-tag-post_tag-desc">Separate tags with commas</p>
+                                            </div>
+                                            <ul class="tagchecklist" role="list">
+                                                <li><button type="button" id="post_tag-check-num-0" class="ntdelbutton"><span class="remove-tag-icon" aria-hidden="true"></span><span class="screen-reader-text">Remove term: 123</span></button>&nbsp;123</li>
+                                                <li><button type="button" id="post_tag-check-num-1" class="ntdelbutton"><span class="remove-tag-icon" aria-hidden="true"></span><span class="screen-reader-text">Remove term: 1234</span></button>&nbsp;1234</li>
+                                            </ul>
+                                        </div>
+                                        <p class="hide-if-no-js">
+                                            <button type="button" class="button-link tagcloud-link" id="link-post_tag" aria-expanded="true">Choose from the most used tags</button>
+                                            <div id="tagcloud-post_tag" class="the-tagcloud">
+                                                <ul class="wp-tag-cloud" role="list">
+                                                    <li><a href="#" role="button" class="tag-cloud-link tag-link-40 tag-link-position-1" style="font-size: 8pt;" aria-label="aide à la conduite automobile (1 item)">aide à la conduite automobile</a></li>
+                                                    <li><a href="#" role="button" class="tag-cloud-link tag-link-33 tag-link-position-2" style="font-size: 8pt;" aria-label="collaboration (1 item)">collaboration</a></li>
+                                                </ul>
+                                            </div>
+                                        </p>
                                     </div>
-                                    <div class="form--warning">CHOOSE FROM THE MOST USED TAGS</div>
                                 </div>
                             </div>
                         </div>
