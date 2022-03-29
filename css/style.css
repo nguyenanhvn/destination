@@ -6139,6 +6139,73 @@ perspective effects (not including the modals and the overlay).
               display: block;
               margin-right: 3px; }
 
+.content-contributors {
+  padding: 30px 0 40px; }
+  .content-contributors .box {
+    display: grid; }
+  .content-contributors .box-top {
+    width: 100%;
+    border-bottom: 2px solid #000;
+    margin-bottom: 20px; }
+    .content-contributors .box-top h2 {
+      font-size: 30px;
+      margin: 0 0 20px;
+      float: left;
+      text-transform: uppercase;
+      font-weight: normal; }
+      @media (max-width: 767px) {
+        .content-contributors .box-top h2 {
+          font-size: 26px; } }
+  .content-contributors .box-items {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(10px, 1fr));
+    grid-gap: 30px; }
+    @media (max-width: 992px) {
+      .content-contributors .box-items {
+        grid-template-columns: repeat(3, minmax(10px, 1fr)); } }
+    @media (max-width: 450px) {
+      .content-contributors .box-items {
+        grid-template-columns: repeat(2, minmax(10px, 1fr)); } }
+    .content-contributors .box-items .item {
+      position: relative; }
+      .content-contributors .box-items .item:nth-child(1):before {
+        display: none; }
+      @media (max-width: 992px) and (min-width: 451px) {
+        .content-contributors .box-items .item:nth-child(4):before {
+          display: none; } }
+      @media (max-width: 450px) {
+        .content-contributors .box-items .item:nth-child(2n):before {
+          display: block; } }
+      .content-contributors .box-items .item:before {
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: #E0E0E0; }
+        @media (max-width: 450px) {
+          .content-contributors .box-items .item:before {
+            display: none; } }
+      .content-contributors .box-items .item .item--avatar img {
+        width: 100%; }
+      .content-contributors .box-items .item .item--caption {
+        padding-top: 15px; }
+        .content-contributors .box-items .item .item--caption .item--name {
+          font: normal normal normal 20px/24px Oswald;
+          letter-spacing: 0px;
+          color: #000000; }
+        .content-contributors .box-items .item .item--caption .item--position {
+          padding-top: 5px;
+          font: normal normal 300 12px/16px Montserrat;
+          letter-spacing: 0px;
+          color: #000000; }
+        .content-contributors .box-items .item .item--caption .item--company {
+          padding-top: 10px;
+          font: normal normal normal 13px/20px Montserrat;
+          letter-spacing: 0px;
+          color: #000000; }
+
 .header-login {
   position: fixed;
   top: 0;
