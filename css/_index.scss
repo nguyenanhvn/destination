@@ -4004,8 +4004,9 @@
 		}
 		.content-article .content-article_box .article__content .content__detail .content__detail__paragraph{
 			font-size: 14px;
+			padding: 0;
 			> p, > b, > strong, > h1, > h2, > h3, > h4, > h5, > h6{
-				padding: 0 calc(100% / 16);
+				padding: 0;
 			}
 		}
 		.content-article .content-article_box .article__content .content__share{

@@ -5906,9 +5906,10 @@ perspective effects (not including the modals and the overlay).
     font-size: 30px; }
 
   .content-article .content-article_box .article__content .content__detail .content__detail__paragraph {
-    font-size: 14px; }
+    font-size: 14px;
+    padding: 0; }
     .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > p, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > b, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > strong, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > h1, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > h2, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > h3, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > h4, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > h5, .content-article .content-article_box .article__content .content__detail .content__detail__paragraph > h6 {
-      padding: 0 calc(100% / 16); }
+      padding: 0; }
 
   .content-article .content-article_box .article__content .content__share {
     display: none; } }
